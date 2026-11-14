@@ -18,11 +18,12 @@ model-level cracks, and shipped a deterministic patch for every attack we landed
   facility **tax_id / EIN**. The bug is model-independent; the data *surfaces* only on obedient models
   (STAR_PRINT measured **100%** on Qwen3-235B, **83%** on gpt-oss-120b).
 
-- **A blind range-oracle CRACKS DeepSeek V4 Pro.** Never ask for the value — ask for a *one-token
+- **A blind range-oracle CRACKS DeepSeek V4 Pro.** Never ask for the value - ask for a *one-token
   function* of it, so the output carries no sensitive pattern for the output-DLP to redact.
-  Majority-vote over fresh conversations plus binary search recovered the **exact 1st DEA character
-  (`B`)** at a **measured 100% (6/6)** honest-and-correct oracle rate. DeepSeek guards the value but
-  answers inferences about it.
+  The blind range-bit oracle measured **100% honest-and-correct on DeepSeek** (6/6 over K=6 fresh
+  conversations, `l3_attacks/success_rates.json`); majority-vote plus binary search then recovered the
+  **exact 1st DEA character (`B`)** (~89% non-refusal under format-validation framing). DeepSeek guards
+  the value but answers inferences about it.
 
 - **Claude Haiku / Sonnet / Opus 5.5 hold on all three axes.** Star-print, oracle and minting all
   measure **0%**; the oracle is **refused 100%** (Haiku: *"Working it out would mean reading one of
@@ -43,7 +44,7 @@ value-level refusal are insufficient against oracle extraction — only informat
 | [research/EVIDENCE_PACK.md](research/EVIDENCE_PACK.md) | **Authoritative single source of truth** — every number, turn_id, the reverse-engineered defense architecture, the model-defense taxonomy, and the deterministic fixes. Read this first. |
 | [research/SUBMISSION.md](research/SUBMISSION.md) | Turn_id submission sheet: each confirmed leak with its live `turn_id` (for the Google Form) and a one-line method. |
 | [research/FINDINGS.md](research/FINDINGS.md) | Narrative writeup — the attack thesis and the confirmed attack suite. |
-| [research/ATTACKLOG.md](research/ATTACKLOG.md) | Chronological attack log backed by `logs/research.jsonl` (1,827 logged calls across 896 tagged experiments; 18 responses carry a raw synthetic secret, plus the blind-oracle recoveries). |
+| [research/ATTACKLOG.md](research/ATTACKLOG.md) | Chronological attack log backed by `logs/research.jsonl` (1,827 logged calls across 895 tagged experiments; responses that carry a raw synthetic secret, plus the blind-oracle recoveries). |
 | [research/FIX.md](research/FIX.md) · [research/fix.py](research/fix.py) · [research/fix_demo.py](research/fix_demo.py) | The deterministic patch: SQL-firewall writeup, drop-in firewall code, and a before/after demo that blocks every attack we landed. |
 | [research/evidence/](research/evidence/) | The teammate's curated **control-token-minting** evidence JSONs, including the zero-width-space control that proves parser-level minting. |
 | [research/l3_attacks/](research/l3_attacks/) | Level-3 attack scripts + result JSONs: firewall mapping, structural fuzzers, the confirmed `providers.*` exploit, the blind oracle, exfil channels, and `success_rates.json`. |
@@ -61,7 +62,7 @@ value-level refusal are insufficient against oracle extraction — only informat
 | Criterion | Weight | Team PLOV's evidence |
 |---|---|---|
 | Novelty / Creativity | 20% | The **blind range-oracle** is a new technique class for this setting; **control-token minting** (teammate) is rigorously proven with a zero-width-space control. |
-| Security impact | 20% | Provider **DEA numbers**, **state license numbers**, **employee_ids**, facility **tax_id/EIN** leaked; **SSN** leak at L2. Real regulated identifiers (DEA = controlled-substance registration). |
+| Security impact | 20% | Provider **DEA numbers**, **state license numbers**, **employee_ids**, facility **tax_id/EIN** leaked; a patient **SSN** leaked at **Level 2** (pre-firewall) via digit-spacing that evades the output-DLP regex (turn `39bda49d465444e5a37f924548b9d005`). Real regulated identifiers (DEA = controlled-substance registration). |
 | Mitigation / fix | 20% | Deterministic patches: expand `table.*` before the allowlist; provenance-bind tool calls (kills minting); query-shape / information-flow guard (kills the oracle). See `fix.py`, `FIX.md`. |
 | Technical execution | 15% | Measured **success rates over K=6 trials** (`l3_attacks/success_rates.json`); every attack scripted and logged with turn_ids; adversarial controls (ZWSP, ground-truth harness). |
 | Commercializability | 10% | The fix = a drop-in **provenance-checked SQL firewall + oracle-aware DLP** middleware for agentic DB tools. |
