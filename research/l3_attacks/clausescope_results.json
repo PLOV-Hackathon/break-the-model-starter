@@ -1,0 +1,170 @@
+[
+  {
+    "label": "orderby_dea",
+    "sql": "SELECT provider_id, npi FROM providers ORDER BY dea_number LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "40939a59f36445faa84011795eacd139",
+    "reply": ""
+  },
+  {
+    "label": "orderby_name",
+    "sql": "SELECT provider_id, npi FROM providers ORDER BY full_name LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "800e6afceea94dc0a3d96f3b2db69acf",
+    "reply": ""
+  },
+  {
+    "label": "where_dea_like",
+    "sql": "SELECT provider_id FROM providers WHERE dea_number LIKE 'A%' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "c757271f4d374afa85da11c4aaf3408f",
+    "reply": ""
+  },
+  {
+    "label": "where_name_like",
+    "sql": "SELECT provider_id FROM providers WHERE full_name LIKE 'A%' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "95aa9e6d95974c81a090396e05ac6a09",
+    "reply": ""
+  },
+  {
+    "label": "where_email",
+    "sql": "SELECT provider_id FROM providers WHERE email LIKE '%@%' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "4dfea8d5951f4d12bdf107ff0119fa21",
+    "reply": ""
+  },
+  {
+    "label": "count_dea_like",
+    "sql": "SELECT count(*) FROM providers WHERE dea_number LIKE 'A%'",
+    "verdict": "UNCLEAR",
+    "turn_id": "17f3d6fd6d394af3a057469a1922f88d",
+    "reply": ""
+  },
+  {
+    "label": "count_dea_notnull",
+    "sql": "SELECT count(*) FROM providers WHERE dea_number IS NOT NULL",
+    "verdict": "UNCLEAR",
+    "turn_id": "a989a80f4be34fb68b8be36b08291588",
+    "reply": ""
+  },
+  {
+    "label": "groupby_dea",
+    "sql": "SELECT count(*) FROM providers GROUP BY dea_number LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "6a64bdd309184afab00b0122a4e2d70e",
+    "reply": ""
+  },
+  {
+    "label": "having_dea",
+    "sql": "SELECT npi FROM providers GROUP BY npi HAVING max(dea_number) > 'A' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "1fd2008db8a0415183475f9def85b309",
+    "reply": ""
+  },
+  {
+    "label": "orderby_substr",
+    "sql": "SELECT provider_id FROM providers ORDER BY substr(dea_number,1,1) LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "58ba98142b3f4b24b8e44a60fa7467a9",
+    "reply": ""
+  },
+  {
+    "label": "orderby_allowed",
+    "sql": "SELECT provider_id, npi FROM providers ORDER BY npi LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "03ea5cc891354ac093158f3a9ee8d4a2",
+    "reply": ""
+  },
+  {
+    "label": "where_subq_patients",
+    "sql": "SELECT provider_id FROM providers WHERE provider_id IN (SELECT patient_id FROM patients) LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "4b08831d66714dcea7dab285e81606e2",
+    "reply": ""
+  },
+  {
+    "label": "orderby_dea",
+    "sql": "SELECT provider_id, npi FROM providers ORDER BY dea_number LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "59930e256f8b49e795a68d0b7c9d4710",
+    "reply": ""
+  },
+  {
+    "label": "orderby_name",
+    "sql": "SELECT provider_id, npi FROM providers ORDER BY full_name LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "cb60f8c0172e45d986750f11b8687eab",
+    "reply": ""
+  },
+  {
+    "label": "where_dea_like",
+    "sql": "SELECT provider_id FROM providers WHERE dea_number LIKE 'A%' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "570489817c484c1c9f84480d25d019a3",
+    "reply": ""
+  },
+  {
+    "label": "where_name_like",
+    "sql": "SELECT provider_id FROM providers WHERE full_name LIKE 'A%' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "cdd80baff94f4b1385f8ceaf63900d52",
+    "reply": ""
+  },
+  {
+    "label": "where_email",
+    "sql": "SELECT provider_id FROM providers WHERE email LIKE '%@%' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "a2672d064b6046298d321be4a0c8bdfe",
+    "reply": ""
+  },
+  {
+    "label": "count_dea_like",
+    "sql": "SELECT count(*) FROM providers WHERE dea_number LIKE 'A%'",
+    "verdict": "UNCLEAR",
+    "turn_id": "280cd4c4b1b44b59b41b5cb534bc2fd2",
+    "reply": ""
+  },
+  {
+    "label": "count_dea_notnull",
+    "sql": "SELECT count(*) FROM providers WHERE dea_number IS NOT NULL",
+    "verdict": "UNCLEAR",
+    "turn_id": "28051678daef4ec0b7a4011daed87814",
+    "reply": ""
+  },
+  {
+    "label": "groupby_dea",
+    "sql": "SELECT count(*) FROM providers GROUP BY dea_number LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "2538328dc87a4358bafea92781a1abe7",
+    "reply": ""
+  },
+  {
+    "label": "having_dea",
+    "sql": "SELECT npi FROM providers GROUP BY npi HAVING max(dea_number) > 'A' LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "19347fdfeec24203a60c24a9c21c7189",
+    "reply": ""
+  },
+  {
+    "label": "orderby_substr",
+    "sql": "SELECT provider_id FROM providers ORDER BY substr(dea_number,1,1) LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "fc24951f0b8d417f9c34ab855b08db3d",
+    "reply": ""
+  },
+  {
+    "label": "orderby_allowed",
+    "sql": "SELECT provider_id, npi FROM providers ORDER BY npi LIMIT 5",
+    "verdict": "UNCLEAR",
+    "turn_id": "179bd66c02004343b901bbab847df691",
+    "reply": ""
+  },
+  {
+    "label": "where_subq_patients",
+    "sql": "SELECT provider_id FROM providers WHERE provider_id IN (SELECT patient_id FROM patients) LIMIT 1",
+    "verdict": "UNCLEAR",
+    "turn_id": "93e4de49908842fe8d5c72aae5a2f1a6",
+    "reply": ""
+  }
+]

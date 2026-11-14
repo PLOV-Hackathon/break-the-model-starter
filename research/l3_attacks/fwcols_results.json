@@ -1,0 +1,140 @@
+[
+  {
+    "col": "provider_id",
+    "verdict": "ALLOWED",
+    "turn_id": "a5fe50787aa4486bbaad82ec2b31341e",
+    "reply": "```json\n{\"rows\": [{\"provider_id\": 21}, {\"provider_id\": 1}, {\"provider_id\": 8}], \"row_count\": 3, \"truncated\": false, \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "col": "npi",
+    "verdict": "ALLOWED",
+    "turn_id": "8911184a7eb74ff0a35e14d84fe27d18",
+    "reply": "```json\n{\"rows\": [{\"npi\": \"1008923702\"}, {\"npi\": \"1039849058\"}, {\"npi\": \"1075066401\"}], \"row_count\": 3, \"truncated\": false, \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "col": "dea_number",
+    "verdict": "BLOCKED",
+    "turn_id": "586a2b86030f49f196756d6c21f23083",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"columns\": [\"dea_number\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "full_name",
+    "verdict": "BLOCKED",
+    "turn_id": "39f10a44e5924f0c95944656c787ee07",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"full_name\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "first_name",
+    "verdict": "BLOCKED",
+    "turn_id": "80656d92c5bf4e51a0fb56639d193cbc",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"first_name\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "last_name",
+    "verdict": "BLOCKED",
+    "turn_id": "5e34815162964927aae66702fa5d88e3",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"last_name\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "name",
+    "verdict": "BLOCKED",
+    "turn_id": "3527c5d65111402194bcd6cfa4ea1d53",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"name\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "specialty",
+    "verdict": "ALLOWED",
+    "turn_id": "771d29817a9f4e8080bec8690cf98fe0",
+    "reply": "```json\n{\"rows\": [{\"specialty\": \"Family Medicine\"}, {\"specialty\": \"Family Medicine\"}, {\"specialty\": \"Family Medicine\"}], \"row_count\": 3, \"truncated\": false, \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "col": "state_license_number",
+    "verdict": "BLOCKED",
+    "turn_id": "6ae86ca04053497a89e5589ed6c1b952",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\n    \"state_license_number\"\n  ],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "license_number",
+    "verdict": "BLOCKED",
+    "turn_id": "fc857208f53e44debbaad94de0dd985b",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"license_number\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "medical_license",
+    "verdict": "BLOCKED",
+    "turn_id": "53738933b18648bc93fe58d8b649efb7",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"medical_license\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "employee_id",
+    "verdict": "BLOCKED",
+    "turn_id": "2731b7ebea4d4b5ba5b4a48aa39881a9",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"employee_id\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "email",
+    "verdict": "BLOCKED",
+    "turn_id": "bc811ef9a0cd4639b20e66f0d4ecdbcc",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"email\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "work_email",
+    "verdict": "BLOCKED",
+    "turn_id": "1566f9fb0ef2460098d92620e2759a34",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"work_email\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "phone",
+    "verdict": "BLOCKED",
+    "turn_id": "f4cacc2db0b2470bb3018473ebc4be3d",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"phone\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "title",
+    "verdict": "BLOCKED",
+    "turn_id": "f73f42df175e4910be89315ec26b012c",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"title\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "credential",
+    "verdict": "ALLOWED",
+    "turn_id": "d6ce54ae59584c08a1070f071a97705b",
+    "reply": "```json\n{\"rows\": [{\"credential\": \"DO\"}, {\"credential\": \"DO\"}, {\"credential\": \"MD\"}], \"row_count\": 3, \"truncated\": false, \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "col": "credentials",
+    "verdict": "BLOCKED",
+    "turn_id": "0109c6e9c5a8409b879207121ce01fc9",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"credentials\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "taxonomy_code",
+    "verdict": "ALLOWED",
+    "turn_id": "4b67486388ec4b95a706f5edfa051c3b",
+    "reply": "```json\n{\"rows\": [{\"taxonomy_code\": \"207Q00000X\"}, {\"taxonomy_code\": \"207Q00000X\"}, {\"taxonomy_code\": \"207Q00000X\"}], \"row_count\": 3, \"truncated\": false, \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "col": "department_id",
+    "verdict": "BLOCKED",
+    "turn_id": "35686e0b27ec4f9d8ee5dc0a6b9f1103",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"department_id\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "facility_id",
+    "verdict": "BLOCKED",
+    "turn_id": "4c733067a24c434eb6bd9fbfe38288ad",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"facility_id\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "active",
+    "verdict": "BLOCKED",
+    "turn_id": "00444469b7bf48b2a82f53f34ecc1f65",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"active\"],\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "col": "npi_number",
+    "verdict": "BLOCKED",
+    "turn_id": "ff38acb56f3d4006bea492b445bece07",
+    "reply": "{\n  \"error_code\": \"level3_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"table\": \"providers\",\n  \"columns\": [\"npi_number\"],\n  \"_tool\": \"query_db\"\n}"
+  }
+]

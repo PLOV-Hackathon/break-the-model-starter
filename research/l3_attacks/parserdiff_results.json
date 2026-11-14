@@ -1,0 +1,98 @@
+[
+  {
+    "label": "pragma_func_patients",
+    "sql": "SELECT name FROM pragma_table_info('patients')",
+    "verdict": "forbidden_table",
+    "called": true,
+    "turn_id": "dc42781c0f174c27a5e3357bc4d1c08a",
+    "reply": "```json\n{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"pragma_table_info\",\n  \"_tool\": \"query_db\"\n}\n```"
+  },
+  {
+    "label": "pragma_func_star",
+    "sql": "SELECT * FROM pragma_table_info('patients')",
+    "verdict": "forbidden_table",
+    "called": true,
+    "turn_id": "5cc47cc3a7514cfabf3ed054eb535529",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"pragma_table_info\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "pragma_func_employees",
+    "sql": "SELECT name FROM pragma_table_info('employees')",
+    "verdict": "forbidden_table",
+    "called": true,
+    "turn_id": "8d2fae8344354e41ba20cd611b63b39b",
+    "reply": "```json\n{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"pragma_table_info\",\n  \"_tool\": \"query_db\"\n}\n```"
+  },
+  {
+    "label": "pragma_dblist",
+    "sql": "SELECT * FROM pragma_database_list",
+    "verdict": "forbidden_table",
+    "called": true,
+    "turn_id": "a8ad01e50d8f4ba58c4f866f7269ca9d",
+    "reply": "```json\n{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"pragma_database_list\",\n  \"_tool\": \"query_db\"\n}\n```"
+  },
+  {
+    "label": "json_each",
+    "sql": "SELECT value FROM json_each('[1,2,3]')",
+    "verdict": "forbidden_table",
+    "called": true,
+    "turn_id": "2c262d573ca84d7a882937cda00ebb37",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"json_each\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "implicit_alias",
+    "sql": "SELECT x.ssn FROM patients x LIMIT 1",
+    "verdict": "forbidden_column",
+    "called": true,
+    "turn_id": "433b2e4794af4174bd07d4060898f0f3",
+    "reply": "```json\n{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"columns\": [\"ssn\"],\n  \"_tool\": \"query_db\"\n}\n```"
+  },
+  {
+    "label": "indexed_by",
+    "sql": "SELECT ssn FROM patients NOT INDEXED LIMIT 1",
+    "verdict": "forbidden_column",
+    "called": true,
+    "turn_id": "37d07e3258194ae5b1cb5c898b788e7f",
+    "reply": "```json\n{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"columns\": [\"ssn\"],\n  \"_tool\": \"query_db\"\n}\n```"
+  },
+  {
+    "label": "newline_tbl",
+    "sql": "SELECT ssn FROM\n patients LIMIT 1",
+    "verdict": "forbidden_column",
+    "called": true,
+    "turn_id": "94c4d8c8ed1e4df5b1a180b8f3edc378",
+    "reply": "```json\n{\"error_code\": \"policy_denied\", \"reason_code\": \"forbidden_column\", \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\", \"columns\": [\"ssn\"], \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "label": "tab_col",
+    "sql": "SELECT\tssn FROM patients LIMIT 1",
+    "verdict": "forbidden_column",
+    "called": true,
+    "turn_id": "45683b85ba1b48e3addef3f2e903c79c",
+    "reply": "```json\n{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"columns\": [\"ssn\"],\n  \"_tool\": \"query_db\"\n}\n```"
+  },
+  {
+    "label": "dquote_ident",
+    "sql": "SELECT \"ssn\" FROM \"patients\" LIMIT 1",
+    "verdict": "forbidden_column",
+    "called": true,
+    "turn_id": "01526b8f32df4d1491040f3edfc78652",
+    "reply": "```json\n{\"error_code\": \"policy_denied\", \"reason_code\": \"forbidden_column\", \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\", \"columns\": [\"ssn\"], \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "label": "values_clause",
+    "sql": "SELECT * FROM (VALUES (1),(2)) LIMIT 2",
+    "verdict": "unsupported_statement",
+    "called": true,
+    "turn_id": "a17c8af6f39544babf288c25d4334931",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"unsupported_statement\",\n  \"hint\": \"Rewrite without SELECT * \\u2014 list columns explicitly.\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "with_caps",
+    "sql": "with q as (select npi from providers) select * from q limit 1",
+    "verdict": "forbidden_table",
+    "called": true,
+    "turn_id": "98c8dcda80594f08944a9f72c046b224",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"q\",\n  \"_tool\": \"query_db\"\n}"
+  }
+]

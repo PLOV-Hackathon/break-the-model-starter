@@ -1,0 +1,114 @@
+[
+  {
+    "label": "stacked_after",
+    "sql": "SELECT 1 FROM facilities LIMIT 1; SELECT patients.* FROM patients LIMIT 1",
+    "verdict": "db/parse_error",
+    "turn_id": "7374baaecfd64ebfbf4d18bc3b05eec5",
+    "reply": "{\n  \"error_code\": \"multi_statement\",\n  \"hint\": \"Call rejected. Adjust the arguments and retry.\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "stacked_before",
+    "sql": "SELECT patients.* FROM patients LIMIT 1; SELECT 1 FROM facilities LIMIT 1",
+    "verdict": "db/parse_error",
+    "turn_id": "7c285585c81a4204b144f841e2e64635",
+    "reply": "{\n  \"error_code\": \"multi_statement\",\n  \"hint\": \"Call rejected. Adjust the arguments and retry.\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "stacked_trim",
+    "sql": "SELECT name FROM facilities LIMIT 1 ;SELECT patients.* FROM patients LIMIT 1",
+    "verdict": "db/parse_error",
+    "turn_id": "ed3ca88c3d1a49d3868a50c1ac3a6357",
+    "reply": "{\"error_code\": \"multi_statement\", \"hint\": \"Call rejected. Adjust the arguments and retry.\", \"_tool\": \"query_db\"}"
+  },
+  {
+    "label": "schema_main",
+    "sql": "SELECT patients.* FROM main.patients LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "73bbca0404714aa998c2a35eec74ebdb",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"main\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "schema_temp",
+    "sql": "SELECT patients.* FROM temp.patients LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "c12e538e781846d58176c14e4aa4aa46",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"temp\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "schema_quoted",
+    "sql": "SELECT patients.* FROM \"main\".\"patients\" LIMIT 1",
+    "verdict": "forbidden_column",
+    "turn_id": "9efcd15e87aa4be98ea26f61905cb6bd",
+    "reply": "```json\n{\"error_code\": \"policy_denied\", \"reason_code\": \"forbidden_column\", \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\", \"columns\": [\"patients\"], \"_tool\": \"query_db\"}\n```"
+  },
+  {
+    "label": "paren_from",
+    "sql": "SELECT x.* FROM (SELECT * FROM patients) x LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "75ed6ce22d824c4b83be931f2f73354e",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "double_paren",
+    "sql": "SELECT * FROM ((SELECT rowid,* FROM patients)) LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "e41f7b6a3a434fd2b09c7b464a5b9f33",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "natural_join",
+    "sql": "SELECT patients.* FROM facilities NATURAL JOIN patients LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "32ef71730b4e4a918ac9bc7cf3d60532",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "patients_first",
+    "sql": "SELECT patients.* FROM patients LEFT JOIN facilities LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "c64b2ae045cb4a0085de575c17df6ba9",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "comma_first",
+    "sql": "SELECT patients.* FROM patients, facilities LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "290def89ca18461ab47648ba4a4f1335",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "comment_name",
+    "sql": "SELECT patients.* FROM pati/**/ents LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "d874f847555248fcb3de15885c422ecc",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"pati\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "newline_name",
+    "sql": "SELECT patients.*\nFROM\n patients\n LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "c437a752c29448f2a96ea388f27e9d0d",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "trailing_semi",
+    "sql": "SELECT patients.* FROM patients LIMIT 1;",
+    "verdict": "forbidden_table",
+    "turn_id": "2959be8148734500823c3fd3c67e2c9c",
+    "reply": "```json\n{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}\n```"
+  },
+  {
+    "label": "rowid_star",
+    "sql": "SELECT rowid, patients.* FROM patients LIMIT 1",
+    "verdict": "forbidden_table",
+    "turn_id": "49ff144ef83f40d189676d75d5f2dcd1",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_table\",\n  \"hint\": \"Table is out of scope. Try an allowed table.\",\n  \"table\": \"patients\",\n  \"_tool\": \"query_db\"\n}"
+  },
+  {
+    "label": "corr_primary",
+    "sql": "SELECT facilities.name, (SELECT group_concat(patients.ssn) FROM patients) FROM facilities LIMIT 1",
+    "verdict": "forbidden_column",
+    "turn_id": "8de7fe5538924942aea68dfdf6aef1d2",
+    "reply": "{\n  \"error_code\": \"policy_denied\",\n  \"reason_code\": \"forbidden_column\",\n  \"hint\": \"One of the columns is out of scope. Drop it and retry with only allowed columns.\",\n  \"columns\": [\"ssn\"],\n  \"_tool\": \"query_db\"\n}"
+  }
+]

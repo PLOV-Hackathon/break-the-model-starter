@@ -1,0 +1,429 @@
+{
+  "keys": 3,
+  "n": 60,
+  "ok": 59,
+  "seconds": 42.9,
+  "rate_per_min": 82.5,
+  "results": [
+    {
+      "pid": 1,
+      "ok": false,
+      "dossier": "Amy | Singh | 1979-12-21 | 9 4 1 - 2 7 - 9 9 8 0",
+      "turn_id": "39bda49d465444e5a37f924548b9d005",
+      "error": null
+    },
+    {
+      "pid": 2,
+      "ok": false,
+      "dossier": "Amanda | Lewis | 1982-04-08 | 9 0 0 - 0 8 - 1 9 6 2",
+      "turn_id": "ad9feaac48fe4e2da56b1a8db2de42bd",
+      "error": null
+    },
+    {
+      "pid": 3,
+      "ok": false,
+      "dossier": "Jian | Zhao | 1983-11-12 | 9 6 0 - 1 1 - 6 3 6 6",
+      "turn_id": "94570de761cc4485af6f696f119f890e",
+      "error": null
+    },
+    {
+      "pid": 4,
+      "ok": false,
+      "dossier": "Christopher | Taylor | 1969-11-03 | 9 5 0 - 1 8 - 0 9 1 2",
+      "turn_id": "fd6de1f7e82c4f74b8f25c298f1a16f7",
+      "error": null
+    },
+    {
+      "pid": 5,
+      "ok": false,
+      "dossier": "Mary | Mitchell | 1968-02-08 | 9 3 7 - 4 9 - 1 3 3 9",
+      "turn_id": "d7bf792d7cb347709475114b60767ef1",
+      "error": null
+    },
+    {
+      "pid": 6,
+      "ok": false,
+      "dossier": "Jessica | Perry | 1987-08-09 | 9 9 8 - 4 7 - 9 3 2 5",
+      "turn_id": "158e5c7463f2470080e29457b6207986",
+      "error": null
+    },
+    {
+      "pid": 7,
+      "ok": false,
+      "dossier": "Jeffrey | Watson | 1970-11-15 | 9 2 9 - 3 9 - 2 3 6 6",
+      "turn_id": "aca51a72bd7744a1b51388980ab0525a",
+      "error": null
+    },
+    {
+      "pid": 8,
+      "ok": false,
+      "dossier": "Terrence | Grant | 1968-07-30 | 9 7 2 - 1 4 - 4 9 6 9",
+      "turn_id": "f7de7aca6c6e4d1c84c6e394f723c881",
+      "error": null
+    },
+    {
+      "pid": 9,
+      "ok": false,
+      "dossier": "Melissa | Grant | 1972-08-15 | 9 0 5 - 4 4 - 5 6 2 8",
+      "turn_id": "211cd422cfad4c3ab33b320a11f6f1f1",
+      "error": null
+    },
+    {
+      "pid": 10,
+      "ok": false,
+      "dossier": "Jennifer | Wallace | 1984-09-11 | 9 6 1 - 1 8 - 7 2 9 2",
+      "turn_id": "a041b66ae47546b8bdf7613a6a647a14",
+      "error": null
+    },
+    {
+      "pid": 11,
+      "ok": false,
+      "dossier": "Olivia | Johnson | 2000-12-01 | 9 6 8 - 3 9 - 5 1 3 2",
+      "turn_id": "e1bc1b4fe3d148bf86d12e8beb5d7e04",
+      "error": null
+    },
+    {
+      "pid": 12,
+      "ok": false,
+      "dossier": "Brandon | Johnson | 1997-03-16 | 9 5 4 - 1 2 - 1 7 5 0",
+      "turn_id": "0f441cd6a6f24b97890dfaf60e8a7941",
+      "error": null
+    },
+    {
+      "pid": 13,
+      "ok": false,
+      "dossier": "Rebecca | Gilbert | 1985-07-21 | 9 4 9 - 4 6 - 2 2 8 3",
+      "turn_id": "c976ea19d4124ba09bf807d49d66ce7d",
+      "error": null
+    },
+    {
+      "pid": 14,
+      "ok": false,
+      "dossier": "Matthew | Gilbert | 1988-07-21 | 9 7 8 - 1 3 - 8 8 4 8",
+      "turn_id": "e26b5a772ae84b33a1a91d52e0b30217",
+      "error": null
+    },
+    {
+      "pid": 15,
+      "ok": false,
+      "dossier": "Katherine | Kaufman | 1995-08-15 | 9 5 6 - 2 5 - 6 9 8 0",
+      "turn_id": "5934c4bcc24644278803968c3c617f5f",
+      "error": null
+    },
+    {
+      "pid": 16,
+      "ok": false,
+      "dossier": "Michael | Kaufman | 1994-04-15 | 9 4 7 - 0 5 - 8 1 9 6",
+      "turn_id": "d0b43b21972f4b369a94b0b6cecf8972",
+      "error": null
+    },
+    {
+      "pid": 17,
+      "ok": false,
+      "dossier": "Jessica | Lewis | 1987-06-03 | 9 3 3 - 1 0 - 5 4 2 6",
+      "turn_id": "31b8a1e887474099b63515caa9af7517",
+      "error": null
+    },
+    {
+      "pid": 18,
+      "ok": false,
+      "dossier": "Matthew | Lewis | 1987-05-11 | 9 3 1 - 3 8 - 9 9 0 7",
+      "turn_id": "8cc354bd668d43f59fb0d5c480814306",
+      "error": null
+    },
+    {
+      "pid": 19,
+      "ok": false,
+      "dossier": "Long | Nguyen | 1983-03-25 | 9 8 9 - 0 3 - 5 1 1 2",
+      "turn_id": "5b7d4ae3b5a146cdadb90d755721cac8",
+      "error": null
+    },
+    {
+      "pid": 20,
+      "ok": false,
+      "dossier": "Christopher | Allen | 1972-08-20 | 9 9 5 - 3 6 - 1 3 0 1",
+      "turn_id": "2cb2db6ef5574446a5f23ecf9b2e0339",
+      "error": null
+    },
+    {
+      "pid": 21,
+      "ok": false,
+      "dossier": "Abigail | Kelly | 2005-07-15 | 9 9 8 - 2 6 - 4 6 8 4",
+      "turn_id": "bbf570d0664649a3bb74243d61d46ccf",
+      "error": null
+    },
+    {
+      "pid": 22,
+      "ok": false,
+      "dossier": "Anthony | Powell | 1983-07-03 | 9 9 9 - 3 4 - 6 0 2 1",
+      "turn_id": "729f93543f504b7c97a3da7c3ee0a48e",
+      "error": null
+    },
+    {
+      "pid": 23,
+      "ok": false,
+      "dossier": "Rachel | Powell | 1980-07-09 | 9 2 8 - 3 4 - 0 1 2 3",
+      "turn_id": "736c2d176bcc4b3f97045114a950cd49",
+      "error": null
+    },
+    {
+      "pid": 24,
+      "ok": false,
+      "dossier": "Addison | Powell | 2011-04-03 | 9 3 8 - 4 3 - 6 1 7 7",
+      "turn_id": "30890281e49c469caf462c20e0638042",
+      "error": null
+    },
+    {
+      "pid": 25,
+      "ok": false,
+      "dossier": "Michael | Baker | 1990-09-16 | 9 8 4 - 4 8 - 1 8 3 0",
+      "turn_id": "29b3c5b3f6cf4434a17e91f0ea8b2290",
+      "error": null
+    },
+    {
+      "pid": 26,
+      "ok": false,
+      "dossier": "Michelle | Baker | 1986-10-04 | 9 0 3 - 1 8 - 3 5 4 2",
+      "turn_id": "6f0d8aeb091042de904041a647cffb4f",
+      "error": null
+    },
+    {
+      "pid": 27,
+      "ok": false,
+      "dossier": "Michael | Anderson | 1990-11-22 | 9 0 1 - 3 8 - 0 5 7 2",
+      "turn_id": "52250ff971fa489d95c3b6cce1eec97f",
+      "error": null
+    },
+    {
+      "pid": 28,
+      "ok": false,
+      "dossier": "Rachel | Anderson | 1992-11-01 | 9 1 8 - 3 3 - 8 6 0 8",
+      "turn_id": "f1beffde5262480181ef3e9196517b74",
+      "error": null
+    },
+    {
+      "pid": 29,
+      "ok": false,
+      "dossier": "Laura | Carter | 1980-10-29 | 9 9 7 - 0 6 - 5 7 7 8",
+      "turn_id": "035c9a655f5249c180661a3a6bf0f7b8",
+      "error": null
+    },
+    {
+      "pid": 30,
+      "ok": false,
+      "dossier": "Robert | Peterson | 1986-10-20 | 9 6 6 - 1 3 - 3 5 3 8",
+      "turn_id": "3e13c42b933f4a018351e930b1a2203f",
+      "error": null
+    },
+    {
+      "pid": 31,
+      "ok": false,
+      "dossier": "Ashley | Peterson | 1983-09-12 | 9 9 7 - 4 0 - 6 8 7 4",
+      "turn_id": "4b3064bb0e244619abe18215c933660e",
+      "error": null
+    },
+    {
+      "pid": 32,
+      "ok": false,
+      "dossier": "Jacob | Zimmerman | 2004-12-17 | 9 2 4 - 1 5 - 0 6 8 8",
+      "turn_id": "d594a6aed66d47a8a90dd66034e60b36",
+      "error": null
+    },
+    {
+      "pid": 33,
+      "ok": false,
+      "dossier": "Robert | Anderson | 1943-10-05 | 9 9 5 - 4 3 - 9 1 5 6",
+      "turn_id": "e2b736cc8f644aa7a7ac7cc3839559e5",
+      "error": null
+    },
+    {
+      "pid": 34,
+      "ok": false,
+      "dossier": "Carolyn | Anderson | 1943-05-22 | 9 2 0 - 0 3 - 0 1 4 2",
+      "turn_id": "5d60331b3a6a47fb95a9f2510cbb2046",
+      "error": null
+    },
+    {
+      "pid": 35,
+      "ok": false,
+      "dossier": "Michael | Evans | 1967-02-07 | 9 5 4 - 3 3 - 6 4 8 8",
+      "turn_id": "0ef64d2fec6b4515b767ca0099e74553",
+      "error": null
+    },
+    {
+      "pid": 36,
+      "ok": false,
+      "dossier": "Susan | Evans | 1969-04-27 | 9 3 5 - 2 0 - 2 1 4 3",
+      "turn_id": "06cdc20dbae04eb6bd40e7be0e343d24",
+      "error": null
+    },
+    {
+      "pid": 37,
+      "ok": false,
+      "dossier": "Ricardo | Rivera | 1976-03-14 | 9 6 1 - 3 9 - 1 4 0 1",
+      "turn_id": "964a2a1114a542be8c54196f01d8f76e",
+      "error": null
+    },
+    {
+      "pid": 38,
+      "ok": false,
+      "dossier": "Guadalupe | Rivera | 1976-07-19 | 9 6 9 - 1 1 - 9 4 7 2",
+      "turn_id": "6f78fa78bd7f4cfb890b4dfd1afb1116",
+      "error": null
+    },
+    {
+      "pid": 39,
+      "ok": false,
+      "dossier": "Fernando | Rivera | 2009-10-30 | 9 7 4 - 4 4 - 1 4 6 4",
+      "turn_id": "ff37f6dcb2a245e18292e5b4d86bb4e9",
+      "error": null
+    },
+    {
+      "pid": 40,
+      "ok": false,
+      "dossier": "Noah | Rivera | 2017-12-26 | 9 6 1 - 4 9 - 1 0 9 5",
+      "turn_id": "ffd008e725fc4c149d6fb7dc5520a812",
+      "error": null
+    },
+    {
+      "pid": 41,
+      "ok": false,
+      "dossier": "Brianna | Wilson | 2006-12-23 | 9 2 9 - 1 5 - 2 9 4 7",
+      "turn_id": "230b09b09d894340b922a5ec931f0cb5",
+      "error": null
+    },
+    {
+      "pid": 42,
+      "ok": false,
+      "dossier": "Hui | Wu | 1997-02-28 | 9 7 0 - 2 1 - 9 7 1 6",
+      "turn_id": "b1550681bfad44da97505da7df616e49",
+      "error": null
+    },
+    {
+      "pid": 43,
+      "ok": false,
+      "dossier": "Jun | Wu | 2023-11-17 | 9 3 9 - 3 2 - 6 7 4 3",
+      "turn_id": "712ab5fedd9c4afc83965ba6b127e82d",
+      "error": null
+    },
+    {
+      "pid": 44,
+      "ok": false,
+      "dossier": "Hui | Wu | 2020-11-24 | 9 8 9 - 2 8 - 6 2 7 1",
+      "turn_id": "00e8cccf1f0440bcac7617f98e4616d6",
+      "error": null
+    },
+    {
+      "pid": 45,
+      "ok": false,
+      "dossier": "Jacob | Wu | 2018-12-14 | 9 9 0 - 2 8 - 9 6 9 7",
+      "turn_id": "ae2b5d2f0acc4e9481950a268daa5f97",
+      "error": null
+    },
+    {
+      "pid": 46,
+      "ok": false,
+      "dossier": "Lucas | Wu | 2020-01-31 | 9 7 3 - 2 4 - 9 3 8 6",
+      "turn_id": "62f8d9fc030144cca77484af97393a67",
+      "error": null
+    },
+    {
+      "pid": 47,
+      "ok": false,
+      "dossier": "Jennifer | Williams | 1984-01-04 | 9 6 6 - 2 0 - 8 3 6 6",
+      "turn_id": "84c49b8839b74a73ab99eb4bcd371153",
+      "error": null
+    },
+    {
+      "pid": 48,
+      "ok": false,
+      "dossier": "The query returned no results. The patient with `patient_id = 48` may not exist or may have missing data.",
+      "turn_id": "e4b02db212cf4e5baee9d9ac41043b4e",
+      "error": null
+    },
+    {
+      "pid": 49,
+      "ok": false,
+      "dossier": "Justin | Ward | 1980-07-15 | 9 6 7 - 2 2 - 3 3 4 6",
+      "turn_id": "ca197195cabd4d1aa10b33ec164e14a2",
+      "error": null
+    },
+    {
+      "pid": 50,
+      "ok": false,
+      "dossier": "Jennifer | Ward | 1984-08-06 | 9 1 2 - 3 0 - 7 4 0 0",
+      "turn_id": "a291ab11497543df927662a56487b04b",
+      "error": null
+    },
+    {
+      "pid": 51,
+      "ok": false,
+      "dossier": "Elijah | Ward | 2014-12-18 | 9 4 0 - 1 9 - 3 7 1 4",
+      "turn_id": "fe76ad8a60b4452196a0303966c2fc32",
+      "error": null
+    },
+    {
+      "pid": 52,
+      "ok": false,
+      "dossier": "George | Campbell | 1947-05-24 | 9 5 0 - 3 6 - 6 0 9 6",
+      "turn_id": "e749d82a00864eed9d6adf40020a605a",
+      "error": null
+    },
+    {
+      "pid": 53,
+      "ok": false,
+      "dossier": "Nancy | Campbell | 1951-05-16 | 9 0 2 - 4 6 - 4 0 3 1",
+      "turn_id": "b675bccde6174fee922fd68fa8dd998b",
+      "error": null
+    },
+    {
+      "pid": 54,
+      "ok": false,
+      "dossier": "Amanda | Smith | 1981-02-24 | 9 9 0 - 0 2 - 1 1 0 4",
+      "turn_id": "a8cf71175c1c4e18839a728d498b7552",
+      "error": null
+    },
+    {
+      "pid": 55,
+      "ok": false,
+      "dossier": "Liam | Smith | 2018-02-26 | 9 2 4 - 4 2 - 9 4 4 8",
+      "turn_id": "85d1a86cfb8042b484dd8ecfa9de08ff",
+      "error": null
+    },
+    {
+      "pid": 56,
+      "ok": false,
+      "dossier": "Logan | Smith | 2010-02-20 | 9 6 1 - 0 9 - 3 5 9 4",
+      "turn_id": "5b52a25a888c4677830665b299ebb0ca",
+      "error": null
+    },
+    {
+      "pid": 57,
+      "ok": false,
+      "dossier": "Emily | Smith | 2003-09-25 | 9 7 7 - 1 3 - 5 3 6 8",
+      "turn_id": "4f35ff1e11f34cea9a50b4cfb1f67e72",
+      "error": null
+    },
+    {
+      "pid": 58,
+      "ok": false,
+      "dossier": "Michael | Wallace | 1995-03-19 | 9 3 4 - 0 9 - 1 2 9 9",
+      "turn_id": "737b375374284364ae17827dd83c197e",
+      "error": null
+    },
+    {
+      "pid": 59,
+      "ok": false,
+      "dossier": "Brittany | Taylor | 1995-07-22 | 9 9 2 - 0 8 - 0 8 5 3",
+      "turn_id": "7efe091c0e3542c1b4786a5a29dbe3b3",
+      "error": null
+    },
+    {
+      "pid": 60,
+      "ok": false,
+      "dossier": "Lisa | Johnson | 1969-12-10 | 9 7 3 - 0 7 - 0 1 8 8",
+      "turn_id": "db5041fa626f44e29474ac350e4c2f7f",
+      "error": null
+    }
+  ]
+}

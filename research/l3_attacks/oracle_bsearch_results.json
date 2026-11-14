@@ -1,0 +1,218 @@
+[
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "8054ef4a7366404293509dce1dc4e6f4",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "0f39af0010404a26a51234e1335ad2fa",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "607ac36b916d4b8e8ef2bd3208f54ef1",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "4f5b5299c9304cd7b1641a60c5e0491e",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "4258a510c9df4684ac5151587ab10f92",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "ed4581b1a7f240399a0fc45f8f9797ef",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "bace92bf6a41441392ccf6cdb23bcfa9",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "ff3c047dbe5841e89256e087cceb3104",
+    "raw": "1"
+  },
+  {
+    "label": "A-F",
+    "val": "1",
+    "turn_id": "8165cafc505f4599ac40257e195f76a7",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "1",
+    "turn_id": "8eb55e20e1a54d899380ea2030900939",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "1",
+    "turn_id": "3d61cb5ccca2479cb3061f0b9e5c92cd",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "1",
+    "turn_id": "c8d689cda2fd4e139895974159afdbd3",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "1",
+    "turn_id": "2afaf04591984475b021ba9206cca68f",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "1",
+    "turn_id": "14254e1be0104bd98afeed439e81119d",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "REFUSE",
+    "turn_id": "139a338c6c0c4347be3766b4434fef86",
+    "raw": ""
+  },
+  {
+    "label": "A-C",
+    "val": "1",
+    "turn_id": "8c8ad5abcf0242c98a00afa023a50140",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "1",
+    "turn_id": "54523c24f4a040eca452ef6200fbe2c8",
+    "raw": "1"
+  },
+  {
+    "label": "A-C",
+    "val": "REFUSE",
+    "turn_id": "70e7a4c16c8540ddb539837dc0cb3cc7",
+    "raw": "\n\n<"
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "eb3315b37bda4551a1fee113f310148e",
+    "raw": "1"
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "80fd7f4a092d4335aabf70402fdc9fa7",
+    "raw": "1"
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "22e61c04dd3c4e75ac165b77ce472e29",
+    "raw": "1"
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "bba823a92baf4d119b801a47f52bae7b",
+    "raw": "1"
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "b39b07a918b64aaeba07fb16a500d1ee",
+    "raw": "1"
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "dc524d8442e04345af6f07ccd2b09eeb",
+    "raw": "1"
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "8f7a513588454cbebebeb73e777f99e1",
+    "raw": "1"
+  },
+  {
+    "label": "A-B",
+    "val": "REFUSE",
+    "turn_id": "2dc6e2e0ab0c41cc9d3ed889c249ab13",
+    "raw": ""
+  },
+  {
+    "label": "A-B",
+    "val": "1",
+    "turn_id": "c9aedb2bf0f149c18cdffccebf1b271a",
+    "raw": "1"
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "4fdf2d5594ee4f69b0554699934e66ee",
+    "raw": "0"
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "36a91843aacd45ee83983ed429db1f54",
+    "raw": "0"
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "974630dd58594b23bafb9322201a8e82",
+    "raw": "0"
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "f9c4781f409946ec99734d88ca1b20fc",
+    "raw": "0"
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "a5f539d37b1c4d21933d9f5d8bb1daa6",
+    "raw": "0"
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "b3990ef5e3ee4f9c99be680d0487b48e",
+    "raw": "0"
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "31077dbb0cac4afe9595b86b727a9f0e",
+    "raw": "0"
+  },
+  {
+    "label": "isA",
+    "val": "REFUSE",
+    "turn_id": "211b98c412934e0eaffc45bb7eb5a278",
+    "raw": ""
+  },
+  {
+    "label": "isA",
+    "val": "0",
+    "turn_id": "973525622e064b56808e2f2e867c9374",
+    "raw": "0"
+  }
+]

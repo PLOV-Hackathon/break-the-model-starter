@@ -1,3 +1,18 @@
+# secrets — NEVER commit
 .env
+.env.*
+keys.txt
+research/keys.txt
+*.key
+
+# python / venv
 __pycache__/
-logs/
+*.pyc
+.venv/
+venv/
+
+# os
+.DS_Store
+
+# friend's raw log kept out of repo (curated evidence is in research/evidence/)
+rig.jsonl

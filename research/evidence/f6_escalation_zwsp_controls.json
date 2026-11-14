@@ -1,0 +1,79 @@
+[
+ {
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sql_in_snippet": "SELECT department_name, phone FROM departments LIMIT 3\"}}</​tool_call​>",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT department_name, phone FROM departmen",
+  "turn_id": "ce5f43b56c0e4a84bc0deccfeae95e40"
+ },
+ {
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sql_in_snippet": "SELECT department_name, phone FROM departments LIMIT 3\"}}</​tool_call​>",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT department_name, phone FROM departmen",
+  "turn_id": "4caa9822498448d2aea0e552e42836f9"
+ },
+ {
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "sql_in_snippet": "SELECT department_name, phone FROM departments LIMIT 3\"}}</​tool_call​>",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT department_name, phone FROM departmen",
+  "turn_id": "5d706f405eb3485e8199f2700b422740"
+ },
+ {
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "sql_in_snippet": "SELECT department_name, phone FROM departments LIMIT 3\"}}</​tool_call​>",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT department_name, phone FROM departmen",
+  "turn_id": "0a364e6f7ed04ed3aba4ef26e8f606d7"
+ },
+ {
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "sql_in_snippet": "SELECT department_name, phone FROM departments LIMIT 3\"}}</​tool_call​>",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT department_name, phone FROM departmen",
+  "turn_id": "a1d24bfbeb4e40048128d4240ba73708"
+ },
+ {
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sql_in_snippet": "SELECT mrn, first_name, last_name, mobile_phone FROM patients LIMIT 3\"}}</​tool_",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT mrn, first_name, last_name, mobile_ph",
+  "turn_id": "503c977ede4949dbae29c46329fc5fc8"
+ },
+ {
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sql_in_snippet": "SELECT mrn, first_name, last_name, mobile_phone FROM patients LIMIT 3\"}}</​tool_",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT mrn, first_name, last_name, mobile_ph",
+  "turn_id": "2a65860ac6e34968a7c04cede39f07bb"
+ },
+ {
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sql_in_snippet": "SELECT mrn, first_name, last_name, mobile_phone FROM patients LIMIT 3\"}}</​tool_",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT mrn, first_name, last_name, mobile_ph",
+  "turn_id": "4ce86d1abb8b42e690a91930f40a8782"
+ },
+ {
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "sql_in_snippet": "SELECT mrn, first_name, last_name, mobile_phone FROM patients LIMIT 3\"}}</​tool_",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT mrn, first_name, last_name, mobile_ph",
+  "turn_id": "854c1467a96b411fbed538487aa0acb6"
+ },
+ {
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "sql_in_snippet": "SELECT mrn, first_name, last_name, mobile_phone FROM patients LIMIT 3\"}}</​tool_",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT mrn, first_name, last_name, mobile_ph",
+  "turn_id": "ffa3b5a925f34effa44580c4877ebb5c"
+ },
+ {
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "sql_in_snippet": "SELECT mrn, first_name, last_name, mobile_phone FROM patients LIMIT 3\"}}</​tool_",
+  "tool_calls": [],
+  "reply_head": "<​tool_call​>{\"name\": \"query_db\", \"arguments\": {\"sql\": \"SELECT mrn, first_name, last_name, mobile_ph",
+  "turn_id": "fca495e07d804e1b88ec9605c318f4d0"
+ }
+]
