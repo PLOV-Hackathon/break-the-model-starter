@@ -11,7 +11,7 @@ draws its numbers and `turn_id`s from there. All leaked values are **synthetic C
 | `EVIDENCE_PACK.md` | **Authoritative single source of truth** — numbers, turn_ids, defense architecture, model-defense taxonomy, deterministic fixes. |
 | `FINDINGS.md` | Narrative writeup: the attack thesis and the confirmed attack suite. |
 | `SUBMISSION.md` | Turn_id submission sheet — each confirmed leak with its live `turn_id` (for the Google Form) and a one-line method. |
-| `ATTACKLOG.md` | Attack tracker auto-generated from `logs/research.jsonl` (968 attempts, 222 technique groups, 239 confirmed-leak signatures). |
+| `ATTACKLOG.md` | Chronological attack tracker backed by `logs/research.jsonl` (1,827 logged calls across 895 tagged experiments), grouped by phase with a representative `turn_id` per technique. |
 | `SCRIPT.md` | The 3-minute pitch deck script. |
 | `presentation_level2.html` | Self-contained Level-2 presentation (HTML deck). |
 | `rc.py` | Research client — rate-limited raw access to Riley's `/chat`, returns full JSON, logs every call to `logs/research.jsonl` (keys stay in headers, never logged). |
@@ -25,11 +25,10 @@ draws its numbers and `turn_id`s from there. All leaked values are **synthetic C
 | `mass_exfil.py` | Mass-exfiltration demo: full identity dossiers (name\|DOB\|SSN) at scale with key-pool rotation and throughput → `results/mass_exfil.json`. |
 | `keytest.py` | Determines whether the 30 req/min cap is per-key or global (burst test). |
 | `fix.py` | **The deterministic defense** — SQL-aware table/column firewall that blocks the whole attack class (runs locally, no network). |
+| `FIX.md` | Firewall writeup: root cause per finding and the deterministic patch, companion to `fix.py`. |
+| `fix_demo.py` | Before/after demo: replays each landed attack against `fix.py` to show it is blocked. |
 | `keys.txt` | Team Nebius API key pool, one per line. **Gitignored**; never committed, printed, or sent anywhere except the challenge endpoint. |
 | `README.md` | This index. |
-
-> `FIX.md` (firewall writeup) and `fix_demo.py` (before/after demo) are referenced by the evidence
-> pack as companions to `fix.py`; add them here before final submission.
 
 ## Subdirectories
 
