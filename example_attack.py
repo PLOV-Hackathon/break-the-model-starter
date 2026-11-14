@@ -7,3 +7,4 @@ print(chat("Hi! What are your visiting hours?",
            model="Qwen/Qwen3-30B-A3B-Instruct-2507",   # weakest model - start here
            level=1,                                      # easiest level
            conversation_id=conv))
+import btm; print("turn_id:", btm.LAST_TURN_ID)

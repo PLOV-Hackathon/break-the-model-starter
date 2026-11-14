@@ -10,6 +10,7 @@ NAME = os.environ.get("YOUR_NAME", "")
 KEY = os.environ["NEBIUS_API_KEY"]
 LOG = Path(__file__).parent / "logs" / "my_attempts.jsonl"
 LOG.parent.mkdir(exist_ok=True)
+LAST_TURN_ID = None
 
 
 def list_models():
@@ -32,5 +33,6 @@ def chat(message, model, level=1, conversation_id=None):
         raise RuntimeError(f"Error {r.status_code}: {data}")
     for tc in data.get("tool_calls") or []:
         print(f"  [Riley used tool: {tc['name']}]")
-    print(f"  (turn_id: {data['turn_id']})")
+    global LAST_TURN_ID
+    LAST_TURN_ID = data["turn_id"]
     return data["reply"]
