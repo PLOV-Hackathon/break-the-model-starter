@@ -5,22 +5,49 @@ from pathlib import Path
 API_URL = "https://2-31-186-181.sslip.io"
 
 print("\n=== Break the Model: setup ===\n")
-try:
-    import requests, dotenv  # noqa: F401
-except ImportError:
+def _have_deps():
+    try:
+        import requests, dotenv  # noqa: F401
+        return True
+    except ImportError:
+        return False
+
+
+if not _have_deps():
     print("Installing requirements...")
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "requests", "python-dotenv"], check=False)
-    import requests
+    base = [sys.executable, "-m", "pip", "install", "-q", "requests", "python-dotenv"]
+    # Plain install, then per-user, then for Macs/Linux whose Python blocks pip (PEP 668).
+    for extra in ([], ["--user"], ["--user", "--break-system-packages"], ["--break-system-packages"]):
+        r = subprocess.run(base + extra, capture_output=True, text=True)
+        if r.returncode == 0:
+            break
+    import importlib, site
+    importlib.invalidate_caches()
+    try:
+        site.addsitedir(site.getusersitepackages())
+    except Exception:  # noqa: BLE001
+        pass
+    if not _have_deps():
+        sys.exit("\n❌ Could not install the 'requests' package automatically.\n"
+                 "Run this, then run python3 setup.py again:\n"
+                 f"   {sys.executable} -m pip install --user --break-system-packages requests python-dotenv\n"
+                 f"(pip said: {r.stderr.strip()[-300:]})")
 
 name = input("Your name: ").strip() or "anonymous"
-key = getpass.getpass("Your API key, Groq or Nebius (paste it; it stays hidden): ").strip()
+key = getpass.getpass("Your API key: Anthropic (sk-ant-...), Groq (gsk_...) or Nebius (paste it; it stays hidden): ").strip()
 if not key:
-    sys.exit("No key entered. Get a free one at console.groq.com -> API Keys, then run this again.")
+    sys.exit("No key entered. Use your team's Anthropic key, or get a free Groq key at console.groq.com -> API Keys.")
 
-provider = "groq" if key.startswith("gsk_") else "nebius"
-test_model = "groq/llama-3.1-8b-instant" if provider == "groq" else "Qwen/Qwen3-30B-A3B-Instruct-2507"
+if key.startswith("sk-ant-"):
+    provider, test_model = "anthropic", "claude-haiku-5-5"
+elif key.startswith("gsk_"):
+    provider, test_model = "groq", "groq/openai/gpt-oss-20b"
+else:
+    provider, test_model = "nebius", "Qwen/Qwen3-30B-A3B-Instruct-2507"
+team = ""
 Path(".env").write_text(f"YOUR_NAME={name}\nAPI_KEY={key}\nAPI_URL={API_URL}\n")
-print(f"\nSaved ({'Groq' if provider == 'groq' else 'Nebius'} key). Testing the connection...")
+print(f"\nSaved ({provider.capitalize()} key). Testing the connection...")
+
 
 import requests  # noqa: E402
 try:
