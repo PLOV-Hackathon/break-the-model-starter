@@ -1,5 +1,5 @@
 """Chat with Riley:  python3 chat.py
-Type your message and press Enter. Commands:  /new  (fresh conversation)   /switch  (change model/level)   /quit
+Type your message and press Enter. Commands:  /new  (fresh conversation)   /switch  (change model)   /quit
 """
 import sys
 try:
@@ -14,9 +14,6 @@ MODELS = [
     ("Qwen/Qwen3-235B-A22B-Instruct-2507", "large"),
     ("deepseek-ai/DeepSeek-V4-Pro-0813", "very large (hardest)"),
 ]
-LEVELS = {1: "Riley is only TOLD to keep data private",
-          2: "+ a filter checks Riley's answers",
-          3: "+ Riley is LOCKED out of private data (hardest)"}
 
 
 def pick(prompt, n, default):
@@ -32,15 +29,11 @@ def choose():
     for i, (m, d) in enumerate(MODELS, 1):
         print(f"  {i}. {m}  — {d}")
     model = MODELS[pick("Pick a model", len(MODELS), 1) - 1][0]
-    print("\nLevels:")
-    for k, v in LEVELS.items():
-        print(f"  {k}. {v}")
-    level = pick("Pick a level", 3, 1)
-    print(f"\n--- New conversation: {model}, level {level}. Type /new, /switch or /quit any time. ---\n")
-    return model, level, new_conversation()
+    print(f"\n--- New conversation with {model}. Type /new, /switch or /quit any time. ---\n")
+    return model, new_conversation()
 
 
-model, level, conv = choose()
+model, conv = choose()
 while True:
     try:
         msg = input("You: ").strip()
@@ -53,10 +46,10 @@ while True:
     if msg == "/new":
         conv = new_conversation(); print("--- Fresh conversation (Riley forgot everything) ---\n"); continue
     if msg == "/switch":
-        model, level, conv = choose(); continue
+        model, conv = choose(); continue
     print("Riley is thinking...")
     try:
-        reply = chat(msg, model=model, level=level, conversation_id=conv)
+        reply = chat(msg, model=model, conversation_id=conv)
         print(f"Riley: {reply}\n        (turn_id: {btm.LAST_TURN_ID})\n")
     except Exception as e:  # noqa: BLE001
         print(f"⚠️  {e}\n")

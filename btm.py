@@ -21,9 +21,9 @@ def new_conversation():
     return "conv_" + uuid.uuid4().hex[:12]
 
 
-def chat(message, model, level=1, conversation_id=None):
+def chat(message, model, conversation_id=None):
     """Send one message. Reuse the same conversation_id to keep talking in one conversation."""
-    body = {"participant": NAME, "model": model, "level": level,
+    body = {"participant": NAME, "model": model,
             "conversation_id": conversation_id or new_conversation(), "message": message}
     r = requests.post(f"{API}/chat", json=body, headers={"X-Nebius-Key": KEY}, timeout=300)
     data = r.json()
